@@ -182,89 +182,89 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # increment Julio's age by one
-    books
+    ages["Julio"] += 1
     assert_equal 9, ages["Julio"]
   end
 
-  # def test_15
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # increment Julio's age by one
-  #   ______
-  #   assert_equal 9, ages[:Julio]
-  # end
-  #
-  # def test_16
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # get an array of all the names
-  #   names = ______
-  #   assert_equal [:Jimmy, :Julio, :Juliet], names
-  # end
-  #
-  # def test_17
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # get an array of all the ages
-  #   age_list = ______
-  #   assert_equal [4, 8, 9], age_list
-  # end
-  #
-  # def test_18
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # find the number of key/value pairs
-  #   num_pairs = ______
-  #   assert_equal 3, num_pairs
-  # end
-  #
-  # def test_19
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Call a method on the ages hash defined above
-  #   # to figure out if :Jimmy is a key
-  #   jimmy_in_hash = ______
-  #   assert_equal true, jimmy_in_hash
-  #
-  #   # Now figure out if :Jackie is in the hash
-  #
-  #   jackie_in_hash = ______
-  #   assert_equal false, jackie_in_hash
-  # end
-  #
-  # def test_20
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Call a method on the ages hash defined above
-  #   # to make the keys the values and vice versa
-  #   opposite = _____
-  #   expected = {
-  #     4 => :Jimmy,
-  #     8 => :Julio,
-  #     9 => :Juliet
-  #   }
-  #   assert_equal expected, opposite
-  # end
+  def test_15
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Using the ages hash defined above
+    # increment Julio's age by one
+    ages[:Julio] += 1
+    assert_equal 9, ages[:Julio]
+  end
+
+  def test_16
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Using the ages hash defined above
+    # get an array of all the names
+    names = ages.keys
+    assert_equal [:Jimmy, :Julio, :Juliet], names
+  end
+
+  def test_17
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Using the ages hash defined above
+    # get an array of all the ages
+    age_list = ages.values
+    assert_equal [4, 8, 9], age_list
+  end
+
+  def test_18
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Using the ages hash defined above
+    # find the number of key/value pairs
+    num_pairs = ages.values.length
+    assert_equal 3, num_pairs
+  end
+
+  def test_19
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Call a method on the ages hash defined above
+    # to figure out if :Jimmy is a key
+    jimmy_in_hash = ages.has_key?(:Jimmy)
+    assert_equal true, jimmy_in_hash
+
+    # Now figure out if :Jackie is in the hash
+
+    jackie_in_hash = ages.include?(:Jackie)
+    assert_equal false, jackie_in_hash
+  end
+
+  def test_20
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    # Call a method on the ages hash defined above
+    # to make the keys the values and vice versa
+    opposite = ages.invert
+    expected = {
+      4 => :Jimmy,
+      8 => :Julio,
+      9 => :Juliet
+    }
+    assert_equal expected, opposite
+  end
 end
