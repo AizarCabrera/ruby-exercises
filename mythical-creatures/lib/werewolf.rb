@@ -6,8 +6,7 @@ class Werewolf
     @name     = name
     @location = location
     @human    = true
-    @wolf     = true
-    @change   = 0
+    @hungry  = false
   end
 
   def human?
@@ -15,12 +14,30 @@ class Werewolf
   end
 
   def change!
-      @human = false
+    if @human  # if they are human
+      @human = false # then change @human to be false
+    else
+      @human = true
+    end
+    @hungry = true
   end
 
   def wolf?
-    @wolf
+    !@human
   end
 
+  def hungry?
+    @hungry
+  end
+
+  def eat(victim)
+    if @human
+      "No...I can't!!"
+    else
+      @hungry = false
+      victim.status = :dead
+      "Nom nom nom"
+    end
+  end
 
 end

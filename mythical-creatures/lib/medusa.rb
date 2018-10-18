@@ -10,6 +10,10 @@ class Medusa
 
   def stare(victim)
     @statues << victim
+    victim.stoned = true
+    if @statues.count > 3
+      @statues.shift.stoned = false
+    end
   end
 
 
