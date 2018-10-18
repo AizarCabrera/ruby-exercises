@@ -18,38 +18,38 @@ If you are new to Ruby, please see [This Guide](https://gist.github.com/josh-wor
 Here is a very rough suggested timeline for working on the exercises. This is just a suggestion, as the exercises can be completed in any order.
 
 * Week 1
-  * data-types
+  <!-- * data-types
     * collections/arrays
     * ints_and_floats
-    * strings
-  * initialize
+    * strings -->
+  <!-- * initialize
     * aardvark
     * beaver
     * cat
     * dog
     * eel
     * ferret
-    * groundhog
-    * horse
-  * mythical-creatures
+    * groundhog -->
+    <!-- * horse -->
+  <!-- * mythical-creatures
     * Unicorn
     * Vampire
-    * Dragon
+    * Dragon -->
 
 * Week 2
-  * data-types/collections/hashes.rb
+  <!-- * data-types/collections/hashes.rb -->
   * objects-and-methods/exercise-1
-  * mythical-creatures
-    * Hobbit
-    * Pirate
-    * Wizard
-  * command-query
-    * leather_chair_test.rb
-    * baby_test.rb
-    * beers_test.rb
+  <!-- * mythical-creatures
+    <!-- * Hobbit -->
+    <!-- * Pirate -->
+    <!-- * Wizard -->
+  <!-- * command-query -->
+    <!-- * leather_chair_test.rb -->
+    <!-- * baby_test.rb -->
+    <!-- * beers_test.rb -->
 
 * Week 3
-  * datatypes/collections/nested_collections.rb
+  <!-- * datatypes/collections/nested_collections.rb -->
   * object-and-methods/exercise-2
   * mythical-creatures
     * Medusa
