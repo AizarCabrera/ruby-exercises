@@ -66,10 +66,9 @@ class Centaur
       @rested = false
       "NO!"
     else
+      rested?
       "Aaaah"
     end
   end
-
-
 
 end
