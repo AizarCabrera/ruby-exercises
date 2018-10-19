@@ -3,10 +3,9 @@ class Centaur
   attr_reader :name, :breed
 
   def initialize(name, breed)
-    @name     = name
-    @breed    = breed
-    # @cranky   = false
-    @standing = true
+    @name         = name
+    @breed        = breed
+    @standing     = true
     @cranky_index = 0
   end
 
@@ -56,5 +55,8 @@ class Centaur
     @standing = true
   end
 
+  def drink_potion
+    "Aaaah"
+  end
 
 end
