@@ -6,7 +6,9 @@ class Centaur
     @name         = name
     @breed        = breed
     @standing     = true
+    @rested       = true
     @cranky_index = 0
+
   end
 
   def shoot
@@ -55,8 +57,19 @@ class Centaur
     @standing = true
   end
 
-  def drink_potion
-    "Aaaah"
+  def rested?
+    @rested
   end
+
+  def drink_potion
+    if laying?
+      @rested = false
+      "NO!"
+    else
+      "Aaaah"
+    end
+  end
+
+
 
 end
