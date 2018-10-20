@@ -1,11 +1,14 @@
 class Bag
 
-def initialize
-  @empty = true
-end
+  attr_reader :count
 
-def empty?
-  @empty
-end
+  def initialize
+    @empty = true
+    @count = 0
+  end
+
+  def empty?
+    @empty
+  end
 
 end
