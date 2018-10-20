@@ -1,10 +1,11 @@
 class Bag
 
-  attr_reader :count
+  attr_reader :count, :candies
 
   def initialize
-    @empty = true
-    @count = 0
+    @empty   = true
+    @count   = 0
+    @candies = []
   end
 
   def empty?

@@ -14,7 +14,6 @@ class BagTest < Minitest::Test
   end
 
   def test_empty_bag_has_no_candies
-    skip
     assert_equal [], Bag.new.candies
   end
 
