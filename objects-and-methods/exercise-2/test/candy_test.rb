@@ -15,7 +15,6 @@ class CandyTest < Minitest::Test
   end
 
   def test_amount_of_sugar_is_100_by_default
-    skip
     candy = Candy.new("Circus Peanuts")
     assert_equal 100, candy.sugar
   end
